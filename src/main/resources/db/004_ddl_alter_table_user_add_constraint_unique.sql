@@ -1,0 +1,1 @@
+alter table users add constraint username_not_null unique (username);

@@ -2,11 +2,19 @@ package ru.procodehub.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Класс, представляющий сущность "Студент".
+ * Студент - это пользователь, зарегистрированный на образовательной платформе.
+ * Класс описывает основные характеристики студента.
+ * @author Антон
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Student {
 
     @Id
@@ -18,6 +26,5 @@ public class Student {
     private String lastname;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
     private User user;
 }
